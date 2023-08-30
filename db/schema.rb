@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_225136) do
     t.string "name"
     t.boolean "active"
     t.string "reason"
-    t.string "type"
+    t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

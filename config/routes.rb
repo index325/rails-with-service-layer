@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :user, only: [:create] do
+    member do
+      patch 'activate'
+      patch 'deactivate'
+      put 'add_permission'
+      put 'remove_permission'
+    end
+  end
 end
